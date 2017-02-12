@@ -1,0 +1,29 @@
+{
+  "name": "nebengers",
+  "version": "0.5.0",
+  "description": "Nebengers API wrapper",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.15.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fawwaz/nebengers-api.git"
+  },
+  "keywords": [
+    "nebengers",
+    "nodejs",
+    "javascript",
+    "transportation",
+    "axios"
+  ],
+  "author": "Fawwaz Muhammad <fawwazmuhammad@gmail.com> (http://fawwaz.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fawwaz/nebengers-api/issues"
+  },
+  "homepage": "https://github.com/fawwaz/nebengers-api#readme"
+}
