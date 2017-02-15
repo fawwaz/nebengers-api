@@ -144,7 +144,7 @@ var Nebengers = (function(){
 			token: this.token,
 			message: params.message,
 			to_user_id: params.to_user_id,
-			title: 'pesan'
+			title: ''
 		}).then(function(response){
 			callback(response.data);
 		}).catch(function(error){
@@ -168,6 +168,21 @@ var Nebengers = (function(){
 			handler(error);
 		});
 	}
+
+	this.create_request = function (params, callback, handler){
+		var url_create_request = this.URL_explore + '/' + params.ride_id + '/createrequest';
+		
+		axios.post(url_create_request,{
+			token: this.token,
+			number_of_seat : 1,
+			optional_messages : params.optional_messages || 'ikut ya ...',
+			payment_type : 'cash'
+		}).then(function(response){
+			callback(response.data);
+		}).catch(function(error){
+			handler(error);
+		});
+	}	
 
 
 	return this;
