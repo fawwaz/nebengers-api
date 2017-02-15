@@ -57,6 +57,12 @@ nebengers.login(user,function(response1){
 			}
 			nebengers.ride_request(ride_request, shared.callback, shared.handler);
 
+			var create_request = {
+				ride_id: response2.result.data[0].id
+			}
+			console.log("Requesting ride with id : "+create_request.ride_id);
+			nebengers.create_request(create_request, shared.callback, shared.handler);
+
 		}, shared.handler);
 	}, shared.handler);		
 },shared.handler);
