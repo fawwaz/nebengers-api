@@ -41,18 +41,16 @@ nebengers.login(user,function(response1){
 		shared.callback(response2);
 
 		var ride_detail = {
-			ride_id: response2.result.data[0].id
+			ride_id: response2.result.data[9].id
 		};
 		nebengers.ride_detail(ride_detail, function(response3){
 			shared.callback(response3);
 
-			// Don't know still doesn't work..
-
-			// var message = {
-			// 	message : 'mas',
-			// 	to_user_id : response3.result.user_id
-			// };
-			// nebengers.message_create(message, shared.callback, shared.handler);
+			var message = {
+				message : 'mas',
+				to_user_id : response3.result.user_id
+			};
+			nebengers.message_create(message, shared.callback, shared.handler);
 
 			var ride_request = {
 				ride_id: response2.result.data[0].id

@@ -140,15 +140,11 @@ var Nebengers = (function(){
 	}
 
 	this.message_create = function (params, callback, handler){
-		console.log(params);
 		axios.post(this.URL_message_create,{
 			token: this.token,
 			message: params.message,
 			to_user_id: params.to_user_id,
-			params: {
-				current_latitude : params.current_latitude || this.default_current_latitude,
-				current_longitude : params.current_longitude || this.default_current_longitude
-			}
+			title: 'pesan'
 		}).then(function(response){
 			callback(response.data);
 		}).catch(function(error){
